@@ -65,6 +65,7 @@ extern u8 nrf_flag,tmp_buf[];
 		LCD_ShowString(60,150,200,16,16,"NRF24L01 RX_Mode");	
 		LCD_ShowString(60,170,200,16,16,"Received DATA:");	
 		NRF24L01_RX_Mode();		  
+
 		while(1)
 		{	  		    		    				 
 			if(nrf_flag==0x40)//一旦接收到信息,则显示出来.
@@ -86,24 +87,19 @@ extern u8 nrf_flag,tmp_buf[];
 	{							    
 		LCD_ShowString(60,150,200,16,16,"NRF24L01 TX_Mode");	
 		NRF24L01_TX_Mode();
-		mode=' ';//从空格键开始  
+		tmp_buf[0]=1;//加入结束符	
+		tmp_buf[1]='a';//加入结束符
 		while(1)
-		{	  		   				 
-			if(NRF24L01_TxPacket(tmp_buf)==TX_OK)
+		{	   
+			NRF24L01_TxPacket(tmp_buf);   				 
+			if((nrf_flag&0x20)>0)
 			{
 				LCD_ShowString(60,170,239,32,16,"Sended DATA:");	
-				LCD_ShowString(0,190,239,32,16,tmp_buf); 
-				key=mode;
-				for(t=0;t<32;t++)
+				for(t=0;t<tmp_buf[0];t++)
 				{
-					key++;
-					if(key>('~'))key=' ';
-					tmp_buf[t]=key;	
+						LCD_ShowChar(0+t*8,190,tmp_buf[t+1],16,0);
 				}
-				mode++; 
-				if(mode>'~')mode=' ';  
-				tmp_buf[0]=31;//加入结束符		   
-				tmp_buf[32]=0;//加入结束符		   
+					tmp_buf[1]=='z'?tmp_buf[1] = 'a': tmp_buf[1]++;   
 			}else
 			{										   	
  				LCD_ShowString(60,170,239,32,16,"Send Failed "); 

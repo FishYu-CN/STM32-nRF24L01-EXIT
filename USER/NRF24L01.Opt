@@ -17,34 +17,27 @@ GRPOPT 3,(SYSTEM),1,0,0
 GRPOPT 4,(CORE),1,0,0
 GRPOPT 5,(FWLib),1,0,0
 
-OPTFFF 1,1,1,150994944,0,68,75,0,<.\main.c><main.c> { 44,0,0,0,2,0,0,0,3,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,225,255,255,255,66,0,0,0,87,0,0,0,2,6,0,0,237,1,0,0 }
-OPTFFF 1,2,1,0,0,1,1,0,<.\stm32f10x_it.c><stm32f10x_it.c> 
+OPTFFF 1,1,1,385875968,0,14,89,0,<.\main.c><main.c> { 44,0,0,0,2,0,0,0,3,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,225,255,255,255,66,0,0,0,87,0,0,0,2,6,0,0,237,1,0,0 }
+OPTFFF 1,2,1,0,0,0,0,0,<.\stm32f10x_it.c><stm32f10x_it.c> 
 OPTFFF 1,3,1,0,0,0,0,0,<.\system_stm32f10x.c><system_stm32f10x.c> 
 OPTFFF 2,4,1,0,0,0,0,0,<..\HARDWARE\LED\led.c><led.c> 
-OPTFFF 2,5,1,0,0,1,1,0,<..\HARDWARE\KEY\key.c><key.c> 
-OPTFFF 2,6,1,0,0,2590,2702,0,<..\HARDWARE\LCD\lcd.c><lcd.c> 
+OPTFFF 2,5,1,0,0,0,0,0,<..\HARDWARE\KEY\key.c><key.c> 
+OPTFFF 2,6,1,0,0,0,0,0,<..\HARDWARE\LCD\lcd.c><lcd.c> 
 OPTFFF 2,7,1,0,0,0,0,0,<..\HARDWARE\SPI\spi.c><spi.c> 
-OPTFFF 2,8,1,0,0,231,249,0,<..\HARDWARE\NRF24L01\24l01.c><24l01.c> 
-OPTFFF 3,9,1,0,0,112,120,0,<..\SYSTEM\delay\delay.c><delay.c> 
-OPTFFF 3,10,1,469762048,0,1,18,0,<..\SYSTEM\sys\sys.c><sys.c> 
+OPTFFF 2,8,1,33554432,0,0,0,0,<..\HARDWARE\NRF24L01\24l01.c><24l01.c> 
+OPTFFF 3,9,1,0,0,0,0,0,<..\SYSTEM\delay\delay.c><delay.c> 
+OPTFFF 3,10,1,469762048,0,0,0,0,<..\SYSTEM\sys\sys.c><sys.c> 
 OPTFFF 3,11,1,0,0,0,0,0,<..\SYSTEM\usart\usart.c><usart.c> 
 OPTFFF 4,12,1,0,0,0,0,0,<..\CORE\core_cm3.c><core_cm3.c> 
-OPTFFF 4,13,2,0,0,139,151,0,<..\CORE\startup_stm32f10x_hd.s><startup_stm32f10x_hd.s> 
+OPTFFF 4,13,2,0,0,0,0,0,<..\CORE\startup_stm32f10x_hd.s><startup_stm32f10x_hd.s> 
 OPTFFF 5,14,1,0,0,0,0,0,<..\STM32F10x_FWLib\src\misc.c><misc.c> 
 OPTFFF 5,15,1,0,0,0,0,0,<..\STM32F10x_FWLib\src\stm32f10x_fsmc.c><stm32f10x_fsmc.c> 
-OPTFFF 5,16,1,0,0,601,609,0,<..\STM32F10x_FWLib\src\stm32f10x_gpio.c><stm32f10x_gpio.c> 
+OPTFFF 5,16,1,0,0,0,0,0,<..\STM32F10x_FWLib\src\stm32f10x_gpio.c><stm32f10x_gpio.c> 
 OPTFFF 5,17,1,0,0,0,0,0,<..\STM32F10x_FWLib\src\stm32f10x_rcc.c><stm32f10x_rcc.c> 
 OPTFFF 5,18,1,0,0,0,0,0,<..\STM32F10x_FWLib\src\stm32f10x_spi.c><stm32f10x_spi.c> 
 OPTFFF 5,19,1,0,0,0,0,0,<..\STM32F10x_FWLib\src\stm32f10x_usart.c><stm32f10x_usart.c> 
 OPTFFF 5,20,1,0,0,0,0,0,<..\STM32F10x_FWLib\src\stm32f10x_exti.c><stm32f10x_exti.c> 
 
-ExtF <D:\待整理\学习\2018毕业设计\stm32程序\实验32 无线通信实验\HARDWARE\NRF24L01\24l01.h> 1,3,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
-ExtF <D:\待整理\学习\2018毕业设计\stm32程序\实验32 无线通信实验\HARDWARE\KEY\key.h> 1,30,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
-ExtF <D:\待整理\学习\2018毕业设计\stm32程序\实验32 无线通信实验\SYSTEM\sys\sys.h> 1,3,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
-ExtF <D:\待整理\学习\2018毕业设计\stm32程序\实验32 无线通信实验\STM32F10x_FWLib\inc\stm32f10x_exti.h> 44,52,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
-ExtF <D:\待整理\学习\2018毕业设计\stm32程序\实验32 无线通信实验\USER\stm32f10x.h> 294,303,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
-ExtF <D:\待整理\学习\2018毕业设计\stm32程序\实验32 无线通信实验\USER\system_stm32f10x.h> 40,1,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
-ExtF <D:\待整理\学习\2018毕业设计\stm32程序\实验32 无线通信实验\STM32F10x_FWLib\inc\misc.h> 55,68,0,{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
 
 TARGOPT 1, (Target 1)
  ADSCLK=8000000
@@ -65,7 +58,9 @@ TARGOPT 1, (Target 1)
   OPTKEY 0,(ST-LINKIII-KEIL_SWO)(-U56FF71067188485713371367 -O78 -S0 -C0 -A0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8004 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000)
   OPTKEY 0,(UL2CM3)(UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000))
   OPTKEY 0,(JL2CM3)(-U20090928 -O78 -S9 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(4) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TRE0 -FO15 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000)
+  OPTBB 0,0,172,1,134239270,0,0,0,0,1,<D:\寰呮暣鐞?瀛︿範\2018姣曚笟璁捐\stm32绋嬪簭\瀹為獙32 鏃犵嚎閫氫俊瀹為獙-鏀规垚涓柇鏂瑰紡\HARDWARE\NRF24L01\24l01.c>()(\\NRF24L01\../HARDWARE/NRF24L01/24l01.c\172)
   OPTWA 0,1,(tmp_buf)
+  OPTWA 1,1,(istatus)
   OPTDF 0x84
   OPTLE <>
   OPTLC <>

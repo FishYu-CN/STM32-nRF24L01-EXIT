@@ -158,20 +158,17 @@ u8 NRF24L01_Write_Buf(u8 reg, u8 *pBuf, u8 len)
 //返回值:发送完成状况
 u8 NRF24L01_TxPacket(u8 *txbuf)
 {
-	u8 sta;
  	SPI2_SetSpeed(SPI_BaudRatePrescaler_8);//spi速度为9Mhz（24L01的最大SPI时钟为10Mhz）   
 	NRF24L01_CE=0;
   	NRF24L01_Write_Buf(WR_TX_PLOAD,txbuf,TX_PLOAD_WIDTH);//写数据到TX BUF  32个字节
- 	NRF24L01_CE=1;//启动发送	   
-	while(NRF24L01_IRQ!=0);//等待发送完成
-	sta=NRF24L01_Read_Reg(STATUS);  //读取状态寄存器的值	   
-	NRF24L01_Write_Reg(WRITE_REG_NRF+STATUS,sta); //清除TX_DS或MAX_RT中断标志
-	if(sta&MAX_TX)//达到最大重发次数
+ 	NRF24L01_CE=1;//启动发送	  
+	nrf_flag=0;	
+	while(nrf_flag==0);//等待发送完成
+	if(nrf_flag&MAX_TX)//达到最大重发次数
 	{
-		NRF24L01_Write_Reg(FLUSH_TX,0xff);//清除TX FIFO寄存器 
 		return MAX_TX; 
 	}
-	if(sta&TX_OK)//发送完成
+	if(nrf_flag&TX_OK)//发送完成
 	{
 		return TX_OK;
 	}
@@ -199,6 +196,7 @@ u8 NRF24L01_RxPacket(u8 *rxbuf)
 //当CE变高后,即进入RX模式,并可以接收数据了		   
 void NRF24L01_RX_Mode(void)
 {
+	u8 sta;		 
 	NRF24L01_CE=0;	  
   	NRF24L01_Write_Buf(WRITE_REG_NRF+RX_ADDR_P0,(u8*)RX_ADDRESS,RX_ADR_WIDTH);//写RX节点地址
 	  
@@ -208,7 +206,13 @@ void NRF24L01_RX_Mode(void)
   	NRF24L01_Write_Reg(WRITE_REG_NRF+RX_PW_P0,RX_PLOAD_WIDTH);//选择通道0的有效数据宽度 	    
   	NRF24L01_Write_Reg(WRITE_REG_NRF+RF_SETUP,0x0f);//设置TX发射参数,0db增益,2Mbps,低噪声增益开启   
   	NRF24L01_Write_Reg(WRITE_REG_NRF+CONFIG, 0x0f);//配置基本工作模式的参数;PWR_UP,EN_CRC,16BIT_CRC,接收模式 
-  	NRF24L01_CE = 1; //CE为高,进入接收模式 
+
+		sta=NRF24L01_Read_Reg(STATUS);  //读取状态寄存器的值	   
+		NRF24L01_Write_Reg(WRITE_REG_NRF+STATUS,sta); //清除RX_DR中断标志
+		NRF24L01_CSN=0;                 //使能SPI传输
+  	SPI2_ReadWriteByte(FLUSH_RX);//清除 RX FIFO 寄存器
+  	NRF24L01_CSN=1;                 //禁止SPI传输	  	
+	NRF24L01_CE = 1; //CE为高,进入接收模式 
 }						 
 //该函数初始化NRF24L01到TX模式
 //设置TX地址,写TX数据宽度,设置RX自动应答的地址,填充TX发送数据,选择RF频道,波特率和LNA HCURR
