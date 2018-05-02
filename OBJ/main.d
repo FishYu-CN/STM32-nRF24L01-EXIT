@@ -20,3 +20,6 @@
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
 ..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\HARDWARE\NRF24L01\24l01.h
+..\obj\main.o: ..\HARDWARE\TOUCH\touch.h
+..\obj\main.o: ..\HARDWARE\TOUCH\ott2001a.h
+..\obj\main.o: ..\HARDWARE\TOUCH\gt9147.h

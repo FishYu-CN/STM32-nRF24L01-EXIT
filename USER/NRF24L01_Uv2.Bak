@@ -28,6 +28,7 @@ File 5,1,<..\STM32F10x_FWLib\src\stm32f10x_gpio.c><stm32f10x_gpio.c>
 File 5,1,<..\STM32F10x_FWLib\src\stm32f10x_rcc.c><stm32f10x_rcc.c>
 File 5,1,<..\STM32F10x_FWLib\src\stm32f10x_spi.c><stm32f10x_spi.c>
 File 5,1,<..\STM32F10x_FWLib\src\stm32f10x_usart.c><stm32f10x_usart.c>
+File 5,1,<..\STM32F10x_FWLib\src\stm32f10x_exti.c><stm32f10x_exti.c>
 
 
 Options 1,0,0  // Target 'Target 1'

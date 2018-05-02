@@ -17,6 +17,12 @@ File 2,1,<..\HARDWARE\KEY\key.c><key.c>
 File 2,1,<..\HARDWARE\LCD\lcd.c><lcd.c>
 File 2,1,<..\HARDWARE\SPI\spi.c><spi.c>
 File 2,1,<..\HARDWARE\NRF24L01\24l01.c><24l01.c>
+File 2,1,<..\HARDWARE\TOUCH\ctiic.c><ctiic.c>
+File 2,1,<..\HARDWARE\TOUCH\gt9147.c><gt9147.c>
+File 2,1,<..\HARDWARE\TOUCH\ott2001a.c><ott2001a.c>
+File 2,1,<..\HARDWARE\TOUCH\touch.c><touch.c>
+File 2,1,<..\HARDWARE\24CXX\24cxx.c><24cxx.c>
+File 2,1,<..\HARDWARE\IIC\myiic.c><myiic.c>
 File 3,1,<..\SYSTEM\delay\delay.c><delay.c>
 File 3,1,<..\SYSTEM\sys\sys.c><sys.c>
 File 3,1,<..\SYSTEM\usart\usart.c><usart.c>
